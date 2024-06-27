@@ -1,9 +1,9 @@
 'use client'
+//this is app/new2/page.js and it will not catch the client side fetch
+// It usage react hooks to fetch data
  
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
-
-const fetcher = (url) => fetch(url).then((r) => r.json())
  
 export default function Page() {
   const [ data, setData ] = useState({})
@@ -18,6 +18,7 @@ export default function Page() {
  
   return <>
   <Link href={"/"}>Main</Link>
+  <br />
   data.title {data.title}
   
   
